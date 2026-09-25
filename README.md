@@ -1,4 +1,4 @@
-# Officers Academy Cadet Reviews System 🇵🇰
+# Reviews System 🇵🇰
 
 [![WordPress](https://img.shields.io/badge/WordPress-Plugin-21759B?logo=wordpress&logoColor=white)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/PHP-7.4%20%7C%208.x-777BB4?logo=php&logoColor=white)](https://www.php.net/)
