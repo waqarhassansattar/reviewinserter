@@ -1,0 +1,92 @@
+[
+  {
+    "student_name": "Muhammad Hamza Khan",
+    "review_text": "Alhamdulillah cleared PMA 154 Long Course Initial Test and ISSB with recommendation from Kohat! Officers Academy notes and mock interviews were 100% accurate.",
+    "review_number": 1,
+    "course": "PMA Long Course",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-88210",
+    "date": "2026-09-02"
+  },
+  {
+    "student_name": "Ayesha Siddiqua",
+    "review_text": "AFNS initial test cleared in 1st attempt! The biology and intelligence tests prepared by Officers Academy were extremely helpful. Highly recommended for all female candidates.",
+    "review_number": 2,
+    "course": "AFNS",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-77149",
+    "date": "2026-08-30"
+  },
+  {
+    "student_name": "Shahzaib Ali",
+    "review_text": "Got recommended for 158 GD Pilot from Gujranwala ISSB! The psychological guidance and GTO tasks practice in academy gave me tremendous confidence.",
+    "review_number": 3,
+    "course": "GD Pilot",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-65431",
+    "date": "2026-08-27"
+  },
+  {
+    "student_name": "Bilal Ahmed Qureshi",
+    "review_text": "Selected for 37 TCC! The physics and mathematics conceptual lectures cleared all my doubts. Academy teachers are true mentors.",
+    "review_number": 4,
+    "course": "TCC",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-54912",
+    "date": "2026-08-24"
+  },
+  {
+    "student_name": "Dr. Zainab Noor",
+    "review_text": "Medical Cadet Course initial academic test was very challenging, but Officers Academy past papers and test bank made it so easy. Ranked in top 10!",
+    "review_number": 1,
+    "course": "Medical Cadet Course",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-43890",
+    "date": "2026-08-20"
+  },
+  {
+    "student_name": "Usman Farooq",
+    "review_text": "Cleared PN Cadets 2026-B. The maritime knowledge and academic portion prepared here was on point. Sir's interview tips worked wonders.",
+    "review_number": 2,
+    "course": "PN Cadets",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-32981",
+    "date": "2026-08-16"
+  },
+  {
+    "student_name": "Fatima Zahra",
+    "review_text": "Recommended in Lady Cadet Course (LCC-24) Signals Corp! Best guidance for psychological battery tests and military planning exercises.",
+    "review_number": 3,
+    "course": "Lady Cadet Course",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-21873",
+    "date": "2026-08-12"
+  },
+  {
+    "student_name": "Danish Raza",
+    "review_text": "Cleared ISSB Kohat for PMA Long Course. Officers Academy provides realistic outdoor task grounds and group discussion sessions.",
+    "review_number": 5,
+    "course": "ISSB",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-10764",
+    "date": "2026-08-08"
+  },
+  {
+    "student_name": "Saad Tariq",
+    "review_text": "Very cooperative faculty. The verbal and non-verbal intelligence modules are top notch. Cleared Initial test comfortably.",
+    "review_number": 4,
+    "course": "PMA Long Course",
+    "stars": 4,
+    "payment_receipt_id": "OA-PAY-99812",
+    "date": "2026-08-03"
+  },
+  {
+    "student_name": "Mariam Javed",
+    "review_text": "Best preparation portal for AFNS. Comprehensive nursing notes and general knowledge quizzes. Thank you Officers Academy!",
+    "review_number": 2,
+    "course": "AFNS",
+    "stars": 5,
+    "payment_receipt_id": "OA-PAY-88723",
+    "date": "2026-07-28"
+  }
+]

@@ -1,0 +1,46 @@
+================================================================================
+OFFICERS ACADEMY - AI PROMPT FOR GENERATING BULK REVIEWS (JSON)
+================================================================================
+
+Aap ChatGPT ya Gemini me neeche dya gya prompt copy kr k paste karein. 
+Aap jitne chaho reviews (e.g. 10, 25, 50) generate krwa skte hen:
+
+---------------------------------(COPY FROM BELOW)---------------------------------
+Please generate [NUMBER, e.g. 20] realistic and positive cadet reviews for "Officers Academy" in Pakistan in pure valid JSON array format.
+
+Context: Officers Academy prepares Pakistani youth for armed forces commission (Pakistan Army, Navy, PAF, ISSB).
+Available Courses (use any or specific one):
+- PMA Long Course
+- AFNS
+- GD Pilot
+- TCC
+- Medical Cadet Course
+- PN Cadets
+- Lady Cadet Course
+- ISSB
+
+Each object in the JSON array MUST strictly contain these exact keys:
+1. "student_name": Realistic Pakistani student name (e.g., "Muhammad Ali", "Fatima Noor", "Usman Ghani", "Kashif Mehmood")
+2. "review_text": Detailed realistic feedback in Roman Urdu or English talking about clear concepts, notes, ISSB recommendation, physical test, initial test clearance, cooperative teachers.
+3. "review_number": An integer between 1 and 5 (representing attempt or review round number, e.g., 1, 2, 3, 4, 5)
+4. "course": One of the exact course names listed above
+5. "stars": Integer rating between 4 and 5
+6. "payment_receipt_id": Realistic receipt format like "OA-REC-#####" (e.g. "OA-REC-74128")
+7. "date": A date in "YYYY-MM-DD" format (e.g. "2026-08-15")
+
+Output ONLY the raw JSON array. Do not wrap in markdown or write extra explanatory text.
+---------------------------------(COPY TILL HERE)---------------------------------
+
+Sample output generated will look like:
+[
+  {
+    "student_name": "Arslan Tariq",
+    "review_text": "Passed PMA Long Course initial test with flying colors. Notes were directly from syllabus!",
+    "review_number": 1,
+    "course": "PMA Long Course",
+    "stars": 5,
+    "payment_receipt_id": "OA-REC-63102",
+    "date": "2026-08-14"
+  }
+]
+================================================================================

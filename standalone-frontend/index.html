@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officers Academy - Cadet Reviews & Recommendations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #14532d;
+            --primary-dark: #0b381e;
+            --primary-light: #166534;
+            --accent-gold: #f59e0b;
+            --accent-gold-dark: #d97706;
+            --bg-slate: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --success-green: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* Top Brand Navigation */
+        .oa-navbar {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .oa-nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .oa-logo-emblem {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #ffffff;
+            box-shadow: 0 3px 8px rgba(20, 83, 45, 0.3);
+        }
+
+        .oa-nav-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            letter-spacing: -0.3px;
+        }
+
+        .oa-nav-sub {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--accent-gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .oa-nav-btn {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .oa-nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(217, 119, 6, 0.35);
+        }
+
+        /* Container */
+        .oa-main-container {
+            max-width: 1200px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        /* Trust Hero Header */
+        .oa-hero-card {
+            background: linear-gradient(135deg, #092e18 0%, #14532d 55%, #1b4d2e 100%);
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 40px 35px 35px 35px;
+            box-shadow: 0 15px 30px -10px rgba(20, 83, 45, 0.35);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .oa-hero-card::after {
+            content: "🎖️";
+            position: absolute;
+            right: 20px;
+            bottom: -20px;
+            font-size: 180px;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+
+        .oa-pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #fef08a;
+            margin-bottom: 18px;
+        }
+
+        .oa-hero-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .oa-hero-title {
+            font-size: 34px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .oa-hero-subtitle {
+            font-size: 15px;
+            color: #d1fae5;
+            max-width: 680px;
+            line-height: 1.6;
+        }
+
+        .oa-btn-cta {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            color: #ffffff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 800;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .oa-btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(217, 119, 6, 0.5);
+            background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+        }
+
+        /* Trust Badges Bar */
+        .oa-trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 25px;
+        }
+
+        .oa-trust-box {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        .oa-trust-icon {
+            font-size: 28px;
+        }
+
+        .oa-trust-text strong {
+            display: block;
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .oa-trust-text span {
+            font-size: 12px;
+            color: #a7f3d0;
+        }
+
+        /* Filter Section */
+        .oa-filter-section {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .oa-filter-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 12px;
+        }
+
+        .oa-filter-scroll {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .oa-pill-filter {
+            background: #f8fafc;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+            padding: 8px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .oa-pill-filter:hover {
+            background: #e2e8f0;
+            color: var(--text-dark);
+        }
+
+        .oa-pill-filter.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 2px 8px rgba(20, 83, 45, 0.25);
+        }
+
+        /* Reviews Grid */
+        .oa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 22px;
+        }
+
+        .oa-review-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+            transition: all 0.2s ease;
+        }
+
+        .oa-review-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -3px rgba(0,0,0,0.08);
+            border-color: #cbd5e1;
+        }
+
+        .oa-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+
+        .oa-author-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .oa-author-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #166534, #15803d);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(22, 101, 52, 0.25);
+        }
+
+        .oa-author-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .oa-verified-tag {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #16a34a;
+        }
+
+        .oa-review-number-badge {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .oa-card-divider-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .oa-course-pill {
+            background: #ecfdf5;
+            color: #065f46;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #a7f3d0;
+        }
+
+        .oa-stars {
+            color: #f59e0b;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .oa-review-body {
+            font-size: 14px;
+            line-height: 1.65;
+            color: #334155;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .oa-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            padding-top: 12px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .oa-receipt-code {
+            font-family: monospace;
+            background: #f8fafc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #64748b;
+            font-size: 11px;
+        }
+
+        /* Modal Overlay & Dialog */
+        .oa-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .oa-modal-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .oa-modal-box {
+            background: #ffffff;
+            width: 100%;
+            max-width: 540px;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 25px 40px -10px rgba(0,0,0,0.25);
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.25s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .oa-modal-overlay.open .oa-modal-box {
+            transform: translateY(0);
+        }
+
+        .oa-close-btn {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            background: #f1f5f9;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .oa-close-btn:hover {
+            background: #e2e8f0;
+            color: var(--text-dark);
+        }
+
+        .oa-modal-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .oa-modal-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 22px;
+        }
+
+        .oa-form-group {
+            margin-bottom: 18px;
+        }
+
+        .oa-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .oa-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+
+        .oa-label .req {
+            color: #ef4444;
+        }
+
+        .oa-input,
+        .oa-select,
+        .oa-textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 14px;
+            color: var(--text-dark);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: #ffffff;
+        }
+
+        .oa-input:focus,
+        .oa-select:focus,
+        .oa-textarea:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.15);
+        }
+
+        /* Interactive Star Selector */
+        .oa-star-selector {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            padding: 8px 12px;
+            border-radius: 10px;
+        }
+
+        .oa-star-item {
+            font-size: 24px;
+            cursor: pointer;
+            color: #cbd5e1;
+            transition: color 0.15s;
+            line-height: 1;
+        }
+
+        .oa-star-item.active {
+            color: #f59e0b;
+        }
+
+        .oa-star-text-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-left: 6px;
+        }
+
+        .oa-btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #15803d 0%, #14532d 100%);
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(20, 83, 45, 0.3);
+            margin-top: 10px;
+        }
+
+        .oa-btn-submit:hover {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            transform: translateY(-1px);
+        }
+
+        /* Success Dialog with Green Animated Checkmark */
+        .oa-success-modal-box {
+            text-align: center;
+            padding: 40px 30px;
+            max-width: 480px;
+        }
+
+        .oa-tick-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px auto;
+        }
+
+        .oa-svg-checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 3;
+            stroke: #22c55e;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #22c55e;
+            animation: tickFill .4s ease-in-out .4s forwards, tickScale .3s ease-in-out .9s both;
+        }
+
+        .oa-svg-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 3;
+            stroke-miterlimit: 10;
+            stroke: #22c55e;
+            fill: none;
+            animation: tickStroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .oa-svg-check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            stroke: #22c55e;
+            animation: tickStroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+        }
+
+        @keyframes tickStroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes tickScale {
+            0%, 100% {
+                transform: none;
+            }
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+
+        @keyframes tickFill {
+            100% {
+                box-shadow: inset 0px 0px 0px 40px rgba(34, 197, 94, 0.12);
+            }
+        }
+
+        .oa-success-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #14532d;
+            margin-bottom: 14px;
+        }
+
+        .oa-success-card-msg {
+            background: #f0fdf4;
+            border: 1.5px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 24px;
+        }
+
+        .oa-success-urdu {
+            font-size: 16px;
+            font-weight: 700;
+            color: #166534;
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }
+
+        .oa-success-sub {
+            font-size: 13px;
+            color: #4b5563;
+        }
+
+        .oa-btn-ok {
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 12px 34px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .oa-btn-ok:hover {
+            background: var(--primary-light);
+        }
+
+        @media (max-width: 768px) {
+            .oa-hero-title {
+                font-size: 26px;
+            }
+            .oa-hero-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .oa-btn-cta {
+                width: 100%;
+                justify-content: center;
+            }
+            .oa-form-row {
+                grid-template-columns: 1fr;
+            }
+            .oa-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="oa-navbar">
+        <a href="#" class="oa-nav-brand">
+            <div class="oa-logo-emblem">OA</div>
+            <div>
+                <div class="oa-nav-title">Officers Academy</div>
+                <div class="oa-nav-sub">Pakistan Armed Forces Prep Portal</div>
+            </div>
+        </a>
+        <button type="button" class="oa-nav-btn" onclick="openReviewModal()">
+            <span>✍️ Write a Review</span>
+        </button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="oa-main-container">
+
+        <!-- Hero Card & Trust Badges -->
+        <div class="oa-hero-card">
+            <div class="oa-pill-badge">
+                <span>🛡️</span> Verified Cadet Reviews & Recommendations Portal
+            </div>
+
+            <div class="oa-hero-row">
+                <div>
+                    <h1 class="oa-hero-title">Officers Academy Cadet Reviews</h1>
+                    <p class="oa-hero-subtitle">Authentic feedback from recommended cadets of Pakistan Army, Navy, Air Force, and ISSB. Discover how our structured curriculum and mentorship produce top-tier military officers.</p>
+                </div>
+                <div>
+                    <button type="button" class="oa-btn-cta" onclick="openReviewModal()">
+                        <span>✍️ Write a Review</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="oa-trust-grid">
+                <div class="oa-trust-box">
+                    <div class="oa-trust-icon">🎖️</div>
+                    <div class="oa-trust-text">
+                        <strong>100% Verified Reviews</strong>
+                        <span>Payment Receipt ID Checked</span>
+                    </div>
+                </div>
+
+                <div class="oa-trust-box">
+                    <div class="oa-trust-icon">⭐</div>
+                    <div class="oa-trust-text">
+                        <strong>4.9 / 5.0 Rating</strong>
+                        <span>From 2,800+ Successful Cadets</span>
+                    </div>
+                </div>
+
+                <div class="oa-trust-box">
+                    <div class="oa-trust-icon">🎯</div>
+                    <div class="oa-trust-text">
+                        <strong>92% Success Rate</strong>
+                        <span>Initial Test & ISSB Recommendations</span>
+                    </div>
+                </div>
+
+                <div class="oa-trust-box">
+                    <div class="oa-trust-icon">🇵🇰</div>
+                    <div class="oa-trust-text">
+                        <strong>National Benchmark</strong>
+                        <span>Pakistan's #1 Cadet Academy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="oa-filter-section">
+            <div class="oa-filter-title">Filter by Course:</div>
+            <div class="oa-filter-scroll" id="filterButtons">
+                <button class="oa-pill-filter active" onclick="filterReviews('all', this)">All Courses (10)</button>
+                <button class="oa-pill-filter" onclick="filterReviews('PMA Long Course', this)">PMA Long Course</button>
+                <button class="oa-pill-filter" onclick="filterReviews('AFNS', this)">AFNS</button>
+                <button class="oa-pill-filter" onclick="filterReviews('GD Pilot', this)">GD Pilot</button>
+                <button class="oa-pill-filter" onclick="filterReviews('TCC', this)">TCC</button>
+                <button class="oa-pill-filter" onclick="filterReviews('Medical Cadet Course', this)">Medical Cadet Course</button>
+                <button class="oa-pill-filter" onclick="filterReviews('PN Cadets', this)">PN Cadets</button>
+                <button class="oa-pill-filter" onclick="filterReviews('Lady Cadet Course', this)">Lady Cadet Course</button>
+                <button class="oa-pill-filter" onclick="filterReviews('ISSB', this)">ISSB</button>
+            </div>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="oa-grid" id="reviewsContainer">
+            <!-- Review 1 -->
+            <div class="oa-review-card" data-course="PMA Long Course">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">M</div>
+                        <div>
+                            <div class="oa-author-name">Muhammad Hamza Khan</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #1</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">PMA Long Course</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Alhamdulillah cleared PMA 154 Long Course Initial Test and ISSB with recommendation from Kohat! Officers Academy notes and mock interviews were 100% accurate and relevant.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 02 Sep, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-88210</span>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="oa-review-card" data-course="AFNS">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">A</div>
+                        <div>
+                            <div class="oa-author-name">Ayesha Siddiqua</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #2</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">AFNS</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    AFNS initial test cleared in 1st attempt! The biology and intelligence tests prepared by Officers Academy were extremely helpful. Highly recommended for all female candidates.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 30 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-77149</span>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="oa-review-card" data-course="GD Pilot">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">S</div>
+                        <div>
+                            <div class="oa-author-name">Shahzaib Ali</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #3</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">GD Pilot</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Got recommended for 158 GD Pilot from Gujranwala ISSB! The psychological guidance and GTO tasks practice in academy gave me tremendous confidence.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 27 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-65431</span>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="oa-review-card" data-course="TCC">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">B</div>
+                        <div>
+                            <div class="oa-author-name">Bilal Ahmed Qureshi</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #4</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">TCC</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Selected for 37 TCC! The physics and mathematics conceptual lectures cleared all my doubts. Academy teachers are true mentors who know exact Army test patterns.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 24 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-54912</span>
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="oa-review-card" data-course="Medical Cadet Course">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">Z</div>
+                        <div>
+                            <div class="oa-author-name">Dr. Zainab Noor</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #1</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">Medical Cadet Course</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Medical Cadet Course initial academic test was very challenging, but Officers Academy past papers and test bank made it so easy. Ranked in top 10 merit!
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 20 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-43890</span>
+                </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="oa-review-card" data-course="PN Cadets">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">U</div>
+                        <div>
+                            <div class="oa-author-name">Usman Farooq</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #2</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">PN Cadets</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Cleared PN Cadets 2026-B. The maritime knowledge and academic portion prepared here was on point. Sir's interview tips worked wonders during naval board.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 16 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-32981</span>
+                </div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="oa-review-card" data-course="Lady Cadet Course">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">F</div>
+                        <div>
+                            <div class="oa-author-name">Fatima Zahra</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #3</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">Lady Cadet Course</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Recommended in Lady Cadet Course (LCC-24) Signals Corp! Best guidance for psychological battery tests and military planning exercises.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 12 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-21873</span>
+                </div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="oa-review-card" data-course="ISSB">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">D</div>
+                        <div>
+                            <div class="oa-author-name">Danish Raza</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #5</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">ISSB</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Cleared ISSB Kohat for PMA Long Course. Officers Academy provides realistic outdoor task grounds and group discussion sessions that remove all hesitation.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 08 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-10764</span>
+                </div>
+            </div>
+
+            <!-- Review 9 -->
+            <div class="oa-review-card" data-course="PMA Long Course">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">S</div>
+                        <div>
+                            <div class="oa-author-name">Saad Tariq</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #4</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">PMA Long Course</span>
+                    <div class="oa-stars">★★★★☆</div>
+                </div>
+                <div class="oa-review-body">
+                    Very cooperative faculty. The verbal and non-verbal intelligence modules are top notch. Cleared Initial test comfortably in 1st round.
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 03 Aug, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-99812</span>
+                </div>
+            </div>
+
+            <!-- Review 10 -->
+            <div class="oa-review-card" data-course="AFNS">
+                <div class="oa-card-header">
+                    <div class="oa-author-meta">
+                        <div class="oa-author-avatar">M</div>
+                        <div>
+                            <div class="oa-author-name">Mariam Javed</div>
+                            <div class="oa-verified-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Verified Cadet
+                            </div>
+                        </div>
+                    </div>
+                    <span class="oa-review-number-badge">Review #2</span>
+                </div>
+                <div class="oa-card-divider-row">
+                    <span class="oa-course-pill">AFNS</span>
+                    <div class="oa-stars">★★★★★</div>
+                </div>
+                <div class="oa-review-body">
+                    Best preparation portal for AFNS. Comprehensive nursing notes and general knowledge quizzes. Thank you Officers Academy!
+                </div>
+                <div class="oa-card-footer">
+                    <span>📅 28 Jul, 2026</span>
+                    <span class="oa-receipt-code">Receipt: OA-PAY-88723</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 1. WRITE A REVIEW MODAL -->
+    <div class="oa-modal-overlay" id="writeReviewModal">
+        <div class="oa-modal-box">
+            <button type="button" class="oa-close-btn" onclick="closeReviewModal()">&times;</button>
+            
+            <h3 class="oa-modal-title">Write a Cadet Review</h3>
+            <p class="oa-modal-desc">Share your honest feedback and experience with Officers Academy preparation.</p>
+
+            <form id="standaloneReviewForm" onsubmit="handleReviewSubmit(event)">
+                <!-- Student Name -->
+                <div class="oa-form-group">
+                    <label class="oa-label">Student Name <span class="req">*</span></label>
+                    <input type="text" id="m_student_name" class="oa-input" placeholder="Enter student full name" required>
+                </div>
+
+                <!-- Course & Review Number -->
+                <div class="oa-form-row oa-form-group">
+                    <div>
+                        <label class="oa-label">Select Course <span class="req">*</span></label>
+                        <select id="m_course" class="oa-select" required>
+                            <option value="">-- Select Course --</option>
+                            <option value="PMA Long Course">PMA Long Course</option>
+                            <option value="AFNS">AFNS</option>
+                            <option value="GD Pilot">GD Pilot</option>
+                            <option value="TCC">TCC</option>
+                            <option value="Medical Cadet Course">Medical Cadet Course</option>
+                            <option value="PN Cadets">PN Cadets</option>
+                            <option value="Lady Cadet Course">Lady Cadet Course</option>
+                            <option value="ISSB">ISSB</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="oa-label">Review Number (1 to 5) <span class="req">*</span></label>
+                        <select id="m_review_number" class="oa-select" required>
+                            <option value="1">Review #1 (Initial Test)</option>
+                            <option value="2">Review #2 (Physical & Medical)</option>
+                            <option value="3">Review #3 (ISSB Guidance)</option>
+                            <option value="4">Review #4 (Academic Classes)</option>
+                            <option value="5">Review #5 (Final Recommendation)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Stars & Payment Receipt ID -->
+                <div class="oa-form-row oa-form-group">
+                    <div>
+                        <label class="oa-label">Select Stars (1 to 5) <span class="req">*</span></label>
+                        <div class="oa-star-selector" id="starPicker">
+                            <span class="oa-star-item active" data-val="1" onclick="setRating(1)">★</span>
+                            <span class="oa-star-item active" data-val="2" onclick="setRating(2)">★</span>
+                            <span class="oa-star-item active" data-val="3" onclick="setRating(3)">★</span>
+                            <span class="oa-star-item active" data-val="4" onclick="setRating(4)">★</span>
+                            <span class="oa-star-item active" data-val="5" onclick="setRating(5)">★</span>
+                            <span class="oa-star-text-label" id="ratingLabel">5 Stars</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="oa-label">Payment Receipt ID <span class="req">*</span></label>
+                        <input type="text" id="m_receipt_id" class="oa-input" placeholder="E.g. OA-REC-8921" required>
+                    </div>
+                </div>
+
+                <!-- Review Text -->
+                <div class="oa-form-group">
+                    <label class="oa-label">Review Text <span class="req">*</span></label>
+                    <textarea id="m_review_text" rows="4" class="oa-textarea" placeholder="Write your detailed feedback here..." required></textarea>
+                </div>
+
+                <button type="submit" class="oa-btn-submit" id="submitBtn">
+                    Submit Review
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. SUCCESS CONFIRMATION MODAL WITH GREEN TICK -->
+    <div class="oa-modal-overlay" id="successConfirmModal">
+        <div class="oa-modal-box oa-success-modal-box">
+            <button type="button" class="oa-close-btn" onclick="closeSuccessModal()">&times;</button>
+            
+            <!-- Animated Green Tick Icon -->
+            <div class="oa-tick-wrapper">
+                <svg class="oa-svg-checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="oa-svg-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="oa-svg-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+
+            <h3 class="oa-success-title">Review Submitted!</h3>
+
+            <div class="oa-success-card-msg">
+                <p class="oa-success-urdu">apka review add ho chuka he payment verify krne k bad yaha display kr dya jae ga</p>
+                <p class="oa-success-sub">After verifying your payment by ID, your review will be displayed here.</p>
+            </div>
+
+            <button type="button" class="oa-btn-ok" onclick="closeSuccessModal()">Theek he (Done)</button>
+        </div>
+    </div>
+
+    <!-- Standalone Script -->
+    <script>
+        let currentRating = 5;
+
+        function openReviewModal() {
+            document.getElementById('writeReviewModal').classList.add('open');
+        }
+
+        function closeReviewModal() {
+            document.getElementById('writeReviewModal').classList.remove('open');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successConfirmModal').classList.remove('open');
+        }
+
+        function setRating(val) {
+            currentRating = val;
+            const stars = document.querySelectorAll('.oa-star-item');
+            stars.forEach(s => {
+                const sVal = parseInt(s.getAttribute('data-val'));
+                if (sVal <= val) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+            document.getElementById('ratingLabel').innerText = val + ' Stars';
+        }
+
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = 'Submitting...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerText = 'Submit Review';
+                btn.disabled = false;
+
+                // Reset form
+                document.getElementById('standaloneReviewForm').reset();
+                setRating(5);
+
+                // Per user requirement:
+                // "jb subit k button pe click kre tu bs isko ye show ho jae apka review add ho chuka he payment verify krne k bad yaha display kr dya jae ga bs and tick lg jae green colur me"
+                closeReviewModal();
+                document.getElementById('successConfirmModal').classList.add('open');
+            }, 400);
+        }
+
+        function filterReviews(course, btnElement) {
+            // Update filter button state
+            const buttons = document.querySelectorAll('.oa-pill-filter');
+            buttons.forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            const cards = document.querySelectorAll('.oa-review-card');
+            cards.forEach(card => {
+                const cardCourse = card.getAttribute('data-course');
+                if (course === 'all' || cardCourse === course) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Close on backdrop click
+        window.onclick = function(event) {
+            const writeModal = document.getElementById('writeReviewModal');
+            const successModal = document.getElementById('successConfirmModal');
+            if (event.target === writeModal) {
+                closeReviewModal();
+            }
+            if (event.target === successModal) {
+                closeSuccessModal();
+            }
+        };
+    </script>
+</body>
+</html>

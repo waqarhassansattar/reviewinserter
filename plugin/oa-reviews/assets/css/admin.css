@@ -1,0 +1,362 @@
+/**
+ * Officers Academy Reviews - Admin Stylesheet
+ */
+
+.oa-admin-wrap {
+    margin-top: 20px;
+    max-width: 1250px;
+}
+
+.oa-header-badge {
+    background: linear-gradient(135deg, #14532d 0%, #064e3b 100%);
+    color: #ffffff;
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(20, 83, 45, 0.2);
+}
+
+.oa-logo-title h1 {
+    color: #ffffff !important;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
+}
+
+.oa-logo-title .subtitle {
+    color: #a7f3d0;
+    font-size: 14px;
+    margin: 0;
+}
+
+.oa-tag-pill {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.oa-tag-pill code {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Counts Summary */
+.oa-counts-summary {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.oa-stat-pill {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.oa-stat-pill.success {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: #22c55e;
+}
+
+.oa-stat-pill.warning {
+    background: rgba(234, 179, 8, 0.2);
+    border-color: #eab308;
+}
+
+/* Grid Layout */
+.oa-grid-container {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+@media (max-width: 960px) {
+    .oa-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.oa-card {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.oa-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Form Styles */
+.oa-form-group {
+    margin-bottom: 18px;
+}
+
+.oa-form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.oa-form-group.half {
+    flex: 1;
+}
+
+.oa-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.oa-select,
+.oa-input {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #8c8f94;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.oa-textarea-code {
+    width: 100%;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px;
+    color: #0f172a;
+}
+
+.oa-textarea-code:focus {
+    border-color: #15803d;
+    background: #ffffff;
+}
+
+.oa-submit-area {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.oa-btn-submit {
+    background: #15803d !important;
+    border-color: #166534 !important;
+    font-size: 16px !important;
+    height: auto !important;
+    padding: 10px 24px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 10px rgba(21, 128, 61, 0.3) !important;
+}
+
+.oa-btn-submit:hover {
+    background: #166534 !important;
+}
+
+/* Sidebar Box Styles */
+.oa-sample-box,
+.oa-ai-prompt-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 18px;
+}
+
+.oa-sample-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.oa-sample-box pre {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    max-height: 180px;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.oa-prompt-readonly {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #334155;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+.oa-help-card {
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+    padding: 14px 16px;
+    border-radius: 6px;
+}
+
+.oa-help-card h4 {
+    margin: 0 0 8px 0;
+    color: #065f46;
+}
+
+.oa-help-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #047857;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Manage Table Styling */
+.oa-manage-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #ffffff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.oa-course-badge {
+    display: inline-block;
+    background: #ecfdf5;
+    color: #065f46;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.oa-receipt-code {
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.oa-stars-text {
+    color: #f59e0b;
+    font-size: 14px;
+}
+
+.oa-badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.oa-badge-status.approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.oa-badge-status.pending {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+/* Delete by Filter Card */
+.oa-delete-filter-card {
+    border-left: 4px solid #ef4444 !important;
+    background: #fffafa !important;
+    margin-bottom: 20px;
+}
+
+.oa-delete-header h3 {
+    color: #b91c1c !important;
+    font-size: 16px !important;
+    margin: 0 0 6px 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.oa-delete-header .description {
+    color: #7f1d1d;
+    margin: 0 0 16px 0;
+    font-size: 13px;
+}
+
+.oa-delete-form-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr 1.2fr 1.2fr auto;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+@media (max-width: 1024px) {
+    .oa-delete-form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .oa-del-btn-col {
+        grid-column: 1 / -1;
+    }
+}
+
+.oa-del-col label {
+    display: block;
+    font-size: 12px;
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+.oa-btn-del-danger {
+    background: #dc2626 !important;
+    border-color: #b91c1c !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 6px 18px !important;
+    height: auto !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
+
+.oa-btn-del-danger:hover {
+    background: #b91c1c !important;
+}
+
